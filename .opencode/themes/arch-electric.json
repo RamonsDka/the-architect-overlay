@@ -1,0 +1,59 @@
+{
+  "$schema": "https://opencode.ai/theme.json",
+  "defs": {
+    "electricBlue": "#00f3ff",
+    "deepBlue":     "#00aaff",
+    "glowCyan":     "#55ffff",
+    "bgDark":       "#050608",
+    "bgPanel":      "#080a0f",
+    "fgElectric":   "#c0eaff",
+    "borderBlue":   "#1a2b3c"
+  },
+  "theme": {
+    "primary":           { "dark": "electricBlue", "light": "electricBlue" },
+    "secondary":         { "dark": "deepBlue",     "light": "deepBlue"     },
+    "accent":            { "dark": "glowCyan",     "light": "glowCyan"     },
+    "error":             { "dark": "#ff2d78",      "light": "#ff2d78"      },
+    "warning":           { "dark": "#ffd166",      "light": "#ffd166"      },
+    "success":           { "dark": "electricBlue", "light": "electricBlue" },
+    "info":              { "dark": "glowCyan",     "light": "glowCyan"     },
+
+    "text":              { "dark": "fgElectric",   "light": "fgElectric"   },
+    "textMuted":         { "dark": "#708090",      "light": "#708090"      },
+    "textDim":           { "dark": "#405060",      "light": "#405060"      },
+    "textHighlight":     { "dark": "glowCyan",     "light": "glowCyan"     },
+
+    "background":        { "dark": "none",         "light": "none"         },
+    "backgroundPanel":   { "dark": "bgPanel",      "light": "bgPanel"      },
+    "backgroundElement": { "dark": "bgDark",       "light": "bgDark"       },
+    "backgroundActive":  { "dark": "#101a24",      "light": "#101a24"      },
+
+    "border":            { "dark": "borderBlue",   "light": "borderBlue"   },
+    "borderActive":      { "dark": "electricBlue", "light": "electricBlue" },
+    "borderSubtle":      { "dark": "#0d141a",      "light": "#0d141a"      },
+    "borderHighlight":   { "dark": "glowCyan",     "light": "glowCyan"     },
+
+    "diffAdded":               { "dark": "#00e5a0", "light": "#00e5a0" },
+    "diffRemoved":             { "dark": "#ff2d78", "light": "#ff2d78" },
+    "diffContext":             { "dark": "#708090", "light": "#708090" },
+    "diffHunkHeader":          { "dark": "deepBlue", "light": "deepBlue" },
+    "diffHighlightAdded":      { "dark": "#00ffa0", "light": "#00ffa0" },
+    "diffHighlightRemoved":    { "dark": "#ff4d8a", "light": "#ff4d8a" },
+    "diffAddedBg":             { "dark": "#0a2a1a", "light": "#0a2a1a" },
+    "diffRemovedBg":           { "dark": "#2a0a1a", "light": "#2a0a1a" },
+    "diffContextBg":           { "dark": "bgDark",  "light": "bgDark"  },
+
+    "markdownHeading":         { "dark": "electricBlue", "light": "electricBlue" },
+    "markdownLink":            { "dark": "glowCyan",     "light": "glowCyan"     },
+    "markdownCode":            { "dark": "deepBlue",     "light": "deepBlue"     },
+
+    "syntaxComment":     { "dark": "#405060",      "light": "#405060"      },
+    "syntaxKeyword":     { "dark": "glowCyan",     "light": "glowCyan"     },
+    "syntaxFunction":    { "dark": "electricBlue", "light": "electricBlue" },
+    "syntaxVariable":    { "dark": "fgElectric",   "light": "fgElectric"   },
+    "syntaxString":      { "dark": "#99e9ff",      "light": "#99e9ff"      },
+    "syntaxNumber":      { "dark": "deepBlue",     "light": "deepBlue"     },
+    "syntaxType":        { "dark": "glowCyan",     "light": "glowCyan"     },
+    "syntaxOperator":    { "dark": "electricBlue", "light": "electricBlue" }
+  }
+}

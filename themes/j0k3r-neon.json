@@ -1,0 +1,59 @@
+{
+  "$schema": "https://opencode.ai/theme.json",
+  "defs": {
+    "neonGreen": "#39ff14",
+    "darkGreen": "#1a5a1a",
+    "forest":    "#228b22",
+    "bgDark":    "#050805",
+    "bgPanel":   "#0a120a",
+    "fgNeon":    "#e0ffe0",
+    "border":    "#223322"
+  },
+  "theme": {
+    "primary":           { "dark": "neonGreen", "light": "neonGreen" },
+    "secondary":         { "dark": "forest",    "light": "forest"    },
+    "accent":            { "dark": "#ffffff",   "light": "#ffffff"   },
+    "error":             { "dark": "#ff0033",   "light": "#ff0033"   },
+    "warning":           { "dark": "#ffff00",   "light": "#ffff00"   },
+    "success":           { "dark": "neonGreen", "light": "neonGreen" },
+    "info":              { "dark": "neonGreen", "light": "neonGreen" },
+
+    "text":              { "dark": "fgNeon",    "light": "fgNeon"    },
+    "textMuted":         { "dark": "#80a080",   "light": "#80a080"   },
+    "textDim":           { "dark": "#406040",   "light": "#406040"   },
+    "textHighlight":     { "dark": "neonGreen", "light": "neonGreen" },
+
+    "background":        { "dark": "none",      "light": "none"      },
+    "backgroundPanel":   { "dark": "bgPanel",   "light": "bgPanel"   },
+    "backgroundElement": { "dark": "bgDark",    "light": "bgDark"    },
+    "backgroundActive":  { "dark": "#1a2a1a",   "light": "#1a2a1a"   },
+
+    "border":            { "dark": "border",    "light": "border"    },
+    "borderActive":      { "dark": "neonGreen", "light": "neonGreen" },
+    "borderSubtle":      { "dark": "#0f1a0f",   "light": "#0f1a0f"   },
+    "borderHighlight":   { "dark": "neonGreen", "light": "neonGreen" },
+
+    "diffAdded":               { "dark": "neonGreen", "light": "neonGreen" },
+    "diffRemoved":             { "dark": "#ff0033",   "light": "#ff0033"   },
+    "diffContext":             { "dark": "#80a080",   "light": "#80a080"   },
+    "diffHunkHeader":          { "dark": "forest",    "light": "forest"    },
+    "diffHighlightAdded":      { "dark": "#a0ffa0",   "light": "#a0ffa0"   },
+    "diffHighlightRemoved":    { "dark": "#ff80a0",   "light": "#ff80a0"   },
+    "diffAddedBg":             { "dark": "#0d1a0d",   "light": "#0d1a0d"   },
+    "diffRemovedBg":           { "dark": "#1a0d0d",   "light": "#1a0d0d"   },
+    "diffContextBg":           { "dark": "bgDark",    "light": "bgDark"    },
+
+    "markdownHeading":         { "dark": "neonGreen", "light": "neonGreen" },
+    "markdownLink":            { "dark": "neonGreen", "light": "neonGreen" },
+    "markdownCode":            { "dark": "forest",    "light": "forest"    },
+
+    "syntaxComment":     { "dark": "#406040",   "light": "#406040"   },
+    "syntaxKeyword":     { "dark": "neonGreen", "light": "neonGreen" },
+    "syntaxFunction":    { "dark": "neonGreen", "light": "neonGreen" },
+    "syntaxVariable":    { "dark": "fgNeon",    "light": "fgNeon"    },
+    "syntaxString":      { "dark": "#b0ffb0",   "light": "#b0ffb0"   },
+    "syntaxNumber":      { "dark": "forest",    "light": "forest"    },
+    "syntaxType":        { "dark": "neonGreen", "light": "neonGreen" },
+    "syntaxOperator":    { "dark": "#ffffff",   "light": "#ffffff"   }
+  }
+}

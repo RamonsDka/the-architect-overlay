@@ -1,0 +1,7 @@
+# .gentle/sdd.yaml
+artifact_store: engram
+project: opencode-gentle-stack
+conventions:
+  - hexagonal-architecture
+  - clean-architecture
+  - testing-patterns

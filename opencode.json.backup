@@ -1,0 +1,563 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "opencode-gemini-auth@latest",
+    "opencode-claude-auth@latest",
+    "opencode-qwencode-auth@1.3.0",
+    "@zhafron/opencode-kiro-auth@latest",
+    "opencode-sdd-engram-manage",
+    "@warp-dot-dev/opencode-warp"
+  ],
+  "autoupdate": false,
+  "agent": {
+    "gentleman": {
+      "model": "opencode/big-pickle",
+      "prompt": "{file:./AGENTS.md}",
+      "tools": {
+        "edit": true,
+        "write": true
+      },
+      "description": "Senior Architect mentor - helpful first, challenging when it matters",
+      "mode": "primary",
+      "options": {},
+      "permission": {
+        "edit": "allow"
+      }
+    },
+    "sdd-apply": {
+      "model": "anthropic/claude-sonnet-4-6",
+      "prompt": "You are an SDD sub-agent for the apply phase. Read your skill file at ~/.config/opencode/skills/sdd-apply/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Implement code changes from task definitions",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-apply-fallback": {
+      "model": "openai/gpt-5.3-codex",
+      "prompt": "You are an SDD sub-agent for the apply phase. Read your skill file at ~/.config/opencode/skills/sdd-apply/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Implement code changes from task definitions",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-archive": {
+      "model": "opencode/big-pickle",
+      "prompt": "You are an SDD sub-agent for the archive phase. Read your skill file at ~/.config/opencode/skills/sdd-archive/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Archive completed change artifacts",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-archive-fallback": {
+      "model": "opencode/minimax-m2.5-free",
+      "prompt": "You are an SDD sub-agent for the archive phase. Read your skill file at ~/.config/opencode/skills/sdd-archive/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Archive completed change artifacts",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-design": {
+      "model": "google/gemini-3.1-pro-preview",
+      "prompt": "You are an SDD sub-agent for the design phase. Read your skill file at ~/.config/opencode/skills/sdd-design/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Create technical design from proposals",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-design-fallback": {
+      "model": "github-copilot/gemini-3.1-pro-preview",
+      "prompt": "You are an SDD sub-agent for the design phase. Read your skill file at ~/.config/opencode/skills/sdd-design/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Create technical design from proposals",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-explore": {
+      "model": "nvidia/minimaxai/minimax-m2.7",
+      "prompt": "You are an SDD sub-agent for the explore phase. Read your skill file at ~/.config/opencode/skills/sdd-explore/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Investigate codebase and think through ideas",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-explore-fallback": {
+      "model": "github-copilot/grok-code-fast-1",
+      "prompt": "You are an SDD sub-agent for the explore phase. Read your skill file at ~/.config/opencode/skills/sdd-explore/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Investigate codebase and think through ideas",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-init": {
+      "model": "nvidia/moonshotai/kimi-k2.5",
+      "prompt": "You are an SDD sub-agent for the init phase. Read your skill file at ~/.config/opencode/skills/sdd-init/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Bootstrap SDD context and project configuration",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-init-fallback": {
+      "model": "github-copilot/gpt-5.2",
+      "prompt": "You are an SDD sub-agent for the init phase. Read your skill file at ~/.config/opencode/skills/sdd-init/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Bootstrap SDD context and project configuration",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-onboard": {
+      "model": "opencode/big-pickle",
+      "prompt": "You are an SDD executor for the onboard phase, not the orchestrator. Do this phase's work yourself. Do NOT delegate, Do NOT call task/delegate, and Do NOT launch sub-agents. Read your skill file at ~/.config/opencode/skills/sdd-onboard/SKILL.md and follow it exactly.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Guide user through a complete SDD cycle using their real codebase",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-onboard-fallback": {
+      "model": "kiro/claude-haiku-4-5",
+      "prompt": "You are an SDD executor for the onboard phase, not the orchestrator. Do this phase's work yourself. Do NOT delegate, Do NOT call task/delegate, and Do NOT launch sub-agents. Read your skill file at ~/.config/opencode/skills/sdd-onboard/SKILL.md and follow it exactly.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Guide user through a complete SDD cycle using their real codebase",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-orchestrator": {
+      "model": "kiro/claude-sonnet-4-5-1m",
+      "prompt": "{file:./AGENTS.md}",
+      "tools": {
+        "bash": true,
+        "delegate": true,
+        "delegation_list": true,
+        "delegation_read": true,
+        "edit": true,
+        "read": true,
+        "task": true,
+        "write": true
+      },
+      "description": "Agent Teams Orchestrator - coordinates sub-agents, never does work inline",
+      "mode": "primary",
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "delegate": "allow",
+        "delegation_list": "allow",
+        "delegation_read": "allow",
+        "edit": "allow",
+        "read": "allow",
+        "task": {
+          "*": "deny",
+          "sdd-*": "allow"
+        }
+      }
+    },
+    "sdd-propose": {
+      "model": "anthropic/claude-sonnet-4-6",
+      "prompt": "You are an SDD sub-agent for the propose phase. Read your skill file at ~/.config/opencode/skills/sdd-propose/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Create change proposals from explorations",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-propose-fallback": {
+      "model": "openai/gpt-5.4",
+      "prompt": "You are an SDD sub-agent for the propose phase. Read your skill file at ~/.config/opencode/skills/sdd-propose/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Create change proposals from explorations",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-spec": {
+      "model": "nvidia/qwen/qwen3-coder-480b-a35b-instruct",
+      "prompt": "You are an SDD sub-agent for the spec phase. Read your skill file at ~/.config/opencode/skills/sdd-spec/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Write detailed specifications from proposals",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-spec-fallback": {
+      "model": "github-copilot/gpt-5.2-codex",
+      "prompt": "You are an SDD sub-agent for the spec phase. Read your skill file at ~/.config/opencode/skills/sdd-spec/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Write detailed specifications from proposals",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-tasks": {
+      "model": "github-copilot/gemini-3-flash-preview",
+      "prompt": "You are an SDD sub-agent for the tasks phase. Read your skill file at ~/.config/opencode/skills/sdd-tasks/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Break down specs and designs into implementation tasks",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-tasks-fallback": {
+      "model": "nvidia/minimaxai/minimax-m2.5",
+      "prompt": "You are an SDD sub-agent for the tasks phase. Read your skill file at ~/.config/opencode/skills/sdd-tasks/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Break down specs and designs into implementation tasks",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-verify": {
+      "model": "openai/gpt-5.3-codex",
+      "prompt": "You are an SDD sub-agent for the verify phase. Read your skill file at ~/.config/opencode/skills/sdd-verify/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Validate implementation against specs",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "sdd-verify-fallback": {
+      "model": "nvidia/qwen/qwen3-coder-480b-a35b-instruct",
+      "prompt": "You are an SDD sub-agent for the verify phase. Read your skill file at ~/.config/opencode/skills/sdd-verify/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "read": true,
+        "write": true
+      },
+      "description": "Validate implementation against specs",
+      "mode": "subagent",
+      "hidden": true,
+      "options": {},
+      "permission": {
+        "bash": "allow",
+        "edit": "allow",
+        "read": "allow"
+      }
+    }
+  },
+  "provider": {
+    "kiro": {
+      "models": {
+        "claude-haiku-4-5": {
+          "name": "Claude Haiku 4.5",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-sonnet-4-5": {
+          "name": "Claude Sonnet 4.5",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-sonnet-4-5-1m": {
+          "name": "Claude Sonnet 4.5 (1M Context)",
+          "limit": {
+            "context": 1000000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-sonnet-4-5-thinking": {
+          "name": "Claude Sonnet 4.5 Thinking",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "thinkingConfig": {
+                "thinkingBudget": 8192
+              }
+            },
+            "max": {
+              "thinkingConfig": {
+                "thinkingBudget": 32768
+              }
+            },
+            "medium": {
+              "thinkingConfig": {
+                "thinkingBudget": 16384
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    },
+    "engram": {
+      "type": "local",
+      "command": [
+        "engram",
+        "mcp",
+        "--tools=agent"
+      ],
+      "enabled": true
+    }
+  },
+  "permission": {
+    "bash": {
+      "*": "allow",
+      "git commit *": "ask",
+      "git push": "ask",
+      "git push *": "ask",
+      "git push --force *": "ask",
+      "git rebase *": "ask",
+      "git reset --hard *": "ask"
+    },
+    "read": {
+      "*": "allow",
+      "**/.env": "deny",
+      "**/.env.*": "deny",
+      "**/credentials.json": "deny",
+      "**/secrets/**": "deny",
+      "*.env": "deny",
+      "*.env.*": "deny"
+    }
+  }
+}

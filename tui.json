@@ -1,0 +1,23 @@
+{
+	"$schema": "https://opencode.ai/tui.json",
+	"plugin": [
+		[
+			"C:\\Users\\DELL\\.config\\opencode\\arch-mask-opencode",
+			{
+				"enabled": true,
+				"theme": "mask-cyber",
+				"set_theme": false,
+				"show_detected": false,
+				"show_os": false,
+				"show_providers": false,
+				"show_sidebar": true
+			}
+		],
+		[
+			"opencode-sdd-engram-manage",
+			{
+				"enabled": true
+			}
+		]
+	]
+}

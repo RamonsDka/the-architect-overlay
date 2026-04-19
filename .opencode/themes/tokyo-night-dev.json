@@ -1,0 +1,66 @@
+{
+  "$schema": "https://opencode.ai/theme.json",
+  "defs": {
+    "blue":      "#7aa2f7",
+    "cyan":      "#7dcfff",
+    "purple":    "#bb9af7",
+    "magenta":   "#bb9af7",
+    "pink":      "#f7768e",
+    "orange":    "#ff9e64",
+    "yellow":    "#e0af68",
+    "green":     "#9ece6a",
+    "teal":      "#1abc9c",
+    "fg":        "#c0caf5",
+    "fg_dark":   "#a9b1d6",
+    "bg_dark":   "#16161e",
+    "bg_panel":  "#1a1b26",
+    "border":    "#3b4261"
+  },
+  "theme": {
+    "primary":           { "dark": "blue",    "light": "blue"    },
+    "secondary":         { "dark": "purple",  "light": "purple"  },
+    "accent":            { "dark": "cyan",    "light": "cyan"    },
+    "error":             { "dark": "pink",    "light": "pink"    },
+    "warning":           { "dark": "yellow",  "light": "yellow"  },
+    "success":           { "dark": "green",   "light": "green"   },
+    "info":              { "dark": "cyan",    "light": "cyan"    },
+
+    "text":              { "dark": "fg",      "light": "fg"      },
+    "textMuted":         { "dark": "fg_dark", "light": "fg_dark" },
+    "textDim":           { "dark": "#565f89", "light": "#565f89" },
+    "textHighlight":     { "dark": "cyan",    "light": "cyan"    },
+
+    "background":        { "dark": "none",    "light": "none"    },
+    "backgroundPanel":   { "dark": "bg_panel", "light": "bg_panel" },
+    "backgroundElement": { "dark": "bg_dark",  "light": "bg_dark"  },
+    "backgroundActive":  { "dark": "#292e42",  "light": "#292e42"  },
+
+    "border":            { "dark": "border",  "light": "border"  },
+    "borderActive":      { "dark": "blue",    "light": "blue"    },
+    "borderSubtle":      { "dark": "#24283b", "light": "#24283b" },
+    "borderHighlight":   { "dark": "cyan",    "light": "cyan"    },
+
+    "diffAdded":               { "dark": "green",  "light": "green"  },
+    "diffRemoved":             { "dark": "pink",   "light": "pink"   },
+    "diffContext":             { "dark": "fg_dark", "light": "fg_dark" },
+    "diffHunkHeader":          { "dark": "purple", "light": "purple" },
+    "diffHighlightAdded":      { "dark": "#b9f27c", "light": "#b9f27c" },
+    "diffHighlightRemoved":    { "dark": "#ff7a93", "light": "#ff7a93" },
+    "diffAddedBg":             { "dark": "#283b2d", "light": "#283b2d" },
+    "diffRemovedBg":           { "dark": "#3f2d3d", "light": "#3f2d3d" },
+    "diffContextBg":           { "dark": "bg_dark", "light": "bg_dark" },
+
+    "markdownHeading":         { "dark": "blue",    "light": "blue"    },
+    "markdownLink":            { "dark": "cyan",    "light": "cyan"    },
+    "markdownCode":            { "dark": "teal",    "light": "teal"    },
+
+    "syntaxComment":     { "dark": "#565f89", "light": "#565f89" },
+    "syntaxKeyword":     { "dark": "purple",  "light": "purple"  },
+    "syntaxFunction":    { "dark": "blue",    "light": "blue"    },
+    "syntaxVariable":    { "dark": "fg",      "light": "fg"      },
+    "syntaxString":      { "dark": "green",   "light": "green"   },
+    "syntaxNumber":      { "dark": "orange",  "light": "orange"  },
+    "syntaxType":        { "dark": "yellow",  "light": "yellow"  },
+    "syntaxOperator":    { "dark": "cyan",    "light": "cyan"    }
+  }
+}

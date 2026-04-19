@@ -1,0 +1,27 @@
+{
+  "models": {
+    "sdd-orchestrator": "kiro/claude-sonnet-4-5-1m",
+    "sdd-explore": "nvidia/minimaxai/minimax-m2.7",
+    "sdd-propose": "anthropic/claude-sonnet-4-6",
+    "sdd-spec": "nvidia/qwen/qwen3-coder-480b-a35b-instruct",
+    "sdd-design": "google/gemini-3.1-pro-preview",
+    "sdd-tasks": "github-copilot/gemini-3-flash-preview",
+    "sdd-apply": "anthropic/claude-sonnet-4-6",
+    "sdd-verify": "openai/gpt-5.3-codex",
+    "sdd-archive": "opencode/big-pickle",
+    "sdd-init": "nvidia/moonshotai/kimi-k2.5",
+    "sdd-onboard": "opencode/big-pickle"
+  },
+  "fallback": {
+    "sdd-explore": "github-copilot/grok-code-fast-1",
+    "sdd-propose": "openai/gpt-5.4",
+    "sdd-spec": "github-copilot/gpt-5.2-codex",
+    "sdd-design": "github-copilot/gemini-3.1-pro-preview",
+    "sdd-tasks": "nvidia/minimaxai/minimax-m2.5",
+    "sdd-apply": "openai/gpt-5.3-codex",
+    "sdd-verify": "nvidia/qwen/qwen3-coder-480b-a35b-instruct",
+    "sdd-archive": "opencode/minimax-m2.5-free",
+    "sdd-init": "github-copilot/gpt-5.2",
+    "sdd-onboard": "kiro/claude-haiku-4-5"
+  }
+}

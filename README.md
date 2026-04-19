@@ -32,13 +32,7 @@ This is NOT a fork. This is an **architectural enhancement layer** that sits on 
 ## 🙏 Credits & Acknowledgments
 ![Architecture Overview](.github/assets/gentle-ia.jpg)
 
-<div align="left">
-  
-<img src=".github/assets/luis.jpg" width="110" height="110" style="border: 3px solid #FF00FF; border-radius: 8px; float: left; margin-right: 20px;">
-
-**Muchas gracias a Ge gigantes.**
-
-</div>
+![Architecture Overview](.github/assets/luis.jpg) > **This project would not exist without...**
 
 Alan's pioneering work on cognitive systems and AI-driven development is the engine that powers this configuration. His dedication to elevating the dev community and teaching us to think like AI architects has been transformational.
 

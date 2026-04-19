@@ -32,7 +32,7 @@ This is NOT a fork. This is an **architectural enhancement layer** that sits on 
 ## 🙏 Credits & Acknowledgments
 ![Architecture Overview](.github/assets/gentle-ia.jpg)
 
-![Architecture Overview](.github/assets/luis.jpg) > **This project would not exist without...**
+> **This project would not exist without...**
 
 Alan's pioneering work on cognitive systems and AI-driven development is the engine that powers this configuration. His dedication to elevating the dev community and teaching us to think like AI architects has been transformational.
 
